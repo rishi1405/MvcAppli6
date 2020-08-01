@@ -1,0 +1,29 @@
+﻿@model MvcAppli6.Models.Emp
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="~/Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="~/Scripts/jquery-ui-1.8.20.min.js" type="text/javascript"></script>
+ 
+
+<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+    $(function () {
+        $("input:text.date").datepicker(
+        {
+            dateFormat: "dd/mm/yy"
+        });
+    });
+</script>
+
+@using (@Html.BeginForm())
+{    
+    @Html.EditorForModel()
+    <br />
+    <input type="submit" value="Save" />
+}

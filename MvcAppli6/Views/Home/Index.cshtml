@@ -1,0 +1,5 @@
+﻿@model IEnumerable<MvcAppli6.Models.Emp>
+@foreach (var item in Model)
+{
+    @Html.Partial("_Emp", item)
+}
